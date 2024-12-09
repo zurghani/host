@@ -1,5 +1,5 @@
-import { Component,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
+import { events } from './events';
 @Component({
   selector: 'app-card-list-with-events',
   imports: [],
@@ -11,4 +11,8 @@ import { Component,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 export class CardListWithEventsComponent {
 
+  @HostListener(`window:${events.init}`, ['$event'])
+  reactInit() {
+    console.log('Angular: React has rendered');
+  }
 }
