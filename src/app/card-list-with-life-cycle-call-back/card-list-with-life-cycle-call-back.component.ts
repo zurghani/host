@@ -1,4 +1,4 @@
-import { Component,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-card-list-with-life-cycle-call-back',
@@ -9,5 +9,5 @@ import { Component,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   schemas: [CUSTOM_ELEMENTS_SCHEMA], // Allow custom elements
 })
 export class CardListWithLifeCycleCallBackComponent {
-
+  cards = '[{"title": "Tile 1", "description": "Description for Tile 1"}, {"title": "Tile 2", "description": "Description for Tile 2"}, {"title": "Tile 3", "description": "Description for Tile 3"}]'
 }
